@@ -2,3 +2,14 @@ body{
     background-color: #2a2a2a;
     color: #ffffff;
 }
+
+h1{
+    color: green;
+    text-align: center;
+    font-size: 72px;
+
+}
+h2{
+    color: #ffffff;
+    text-align: center;
+}
