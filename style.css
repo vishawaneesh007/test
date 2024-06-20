@@ -3,8 +3,14 @@ body{
     color: #ffffff;
 }
 
-h1{
-    font-size: 50px;
-    font-weight: 700;
-    color:red;
-}
+
+    h1{
+        color: green;
+        text-align: center;
+        font-size: 72px;
+    
+    }
+    h2{
+        color: #ffffff;
+        text-align: center;
+    }
