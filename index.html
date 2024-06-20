@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="country">
+        <!-- <select id="country" onchange="cityValue()">
+
+        </select> -->
+    </div>
+    <div class="city">
+        <!-- <select id="city">
+
+        </select> -->
+    </div>
+
+
+
+
+    <script>
+        const dealer = [
+            {
+                name: 'India',
+                city: ['Delhi', 'Noida', 'Kanpur']
+            },
+            {
+                name: 'USA',
+                city: ['New York', 'Chicago', 'Florida']
+            },
+            {
+                name: 'Australia',
+                city: ['Sydney', 'Caneberra', 'Perth']
+            }
+        ]
+
+        // let option = "";
+        // dealer.forEach((el)=>{
+        //     option += `<option value="${el.name}">${el.name}</option>`
+        // })
+
+        // document.getElementById("country").innerHTML = option
+
+        // function cityValue(){
+        //     let countryVal = document.getElementById("country").value;
+        //     console.log(countryVal);
+
+        //     let cityOption = "";
+
+        //     dealer.forEach((el)=>{
+        //         if(el.name === countryVal){
+        //             el.city.forEach((cityval)=>{
+        //                 cityOption += `<option value="${cityval}">${cityval}</option>`
+        //             })
+        //         }
+        //     })
+        //     document.getElementById("city").innerHTML = cityOption
+
+
+
+
+        // }
+        // cityValue()
+
+
+        // let country = `<select>`;
+        // dealer.forEach((el) => {
+        //     country += `<option value="${el.name}">${el.name}</option>`
+        // })
+
+        // country += `</select>`
+
+        // document.querySelector(".country").innerHTML = country
+
+        // function setCity(){
+        //     let countryValue = document.querySelector(".country select").value
+        //     console.log(countryValue);
+        // } 
+        // setCity();
+
+        // document.querySelector(".country select").addEventListener("change")
+
+
+
+            const AppMethods = {
+                SetSelect: function(arr, keyname, sel='') {
+                    let selectHtml = '<select>';
+                        // console.log('arr :>> ', arr);
+                    if(arr) {
+                        arr.forEach(el => {
+                            // console.log('el.keyname :>> ', el);
+                        selectHtml += `<option value="${el[keyname]}">${el[keyname]}</option>`;
+                    });
+                    selectHtml += '</select>';
+                    document.querySelector(`${sel}`).innerHTML = selectHtml;
+                    }
+                },
+                mapcity: function(country, arr, keyname) {
+                    let cities = []
+                    if(arr){
+                        arr.filter((el)=>{
+                            if(el.keyname === country){
+                                cities.push(el.city)
+                                console.log(el.city);
+                            }
+                        })
+                    }
+                    alert()
+
+
+
+                    // let cities = arr.filter((el) => {
+                    //     if(el[keyname] == country) {
+
+                    //         console.log(el.keyname);
+                    //         el[city];
+                    //     }
+                    // });
+                    // console.log(cities);;
+                }
+            };
+            AppMethods.SetSelect(dealer, 'name', '.country');
+            let cities = AppMethods.mapcity('India', dealer, 'city');
+
+            console.log(cities);
+            
+
+
+
+
+            // const countryEl = document.querySelector('.country select').value;
+            // const citiesEl = document.querySelector('.city');
+           
+            // console.log(citiesEl);
+
+
+
+            // AppMethods.mapcity(countryEl, dealer, 'city', '.city');
+
+            
+    </script>
+</body>
+
+</html>
